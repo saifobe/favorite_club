@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h2>{{ club.name }}</h2>
+<h4>Fan Name: {{ club.fan.username }}</h4>
+<p>{{ club.details }}</p>
+<a href="{% url 'club_update' club.pk %}">+ Update Club</a>
+<a href="{% url 'club_delete' club.pk %}">+ Delete Club</a>
+
+{% endblock content %}

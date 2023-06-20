@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<a href="{% url 'club_create' %}">+ New Club</a>
+<ul>
+  {% for club in object_list %}
+  <li>
+    <a href="{% url 'club_detail' club.pk %}">{{ club.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+
+{% endblock content %}
